@@ -1,10 +1,11 @@
 * {
     zoom: 1;
     font-family: "SF Pro", sans-serif;
+    box-sizing: border-box;
 }
 
 body {
-    margin: 0; 
+    margin: 0;
     padding: 0;
     position: relative;
     min-height: 100vh;
@@ -13,10 +14,10 @@ body {
 body::before {
     content: "";
     position: fixed;
-    top: -20px;      
-    left: -20px;    
-    width: calc(100% + 40px);   
-    height: calc(100% + 40px);  
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
     background-image: url("images/meteor_blue.png");
     background-size: cover;
     background-position: center;
@@ -31,27 +32,24 @@ h1 {
     font-size: 65px;
     font-weight: 400;
     margin-top: 250px;
-    
-    /* Typing animation */
     overflow: hidden;
     white-space: nowrap;
     border-right: 3px solid white;
     width: 0;
-    animation: 
-        typing 4s steps(50) forwards,
+    animation:
+        typing 5s steps(50) forwards,
         blink-caret .75s step-end 5;
 }
 
 @keyframes typing {
     from { width: 0; }
-    to { width: 85%; }
+    to { width: 78%; }
 }
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
     50% { border-color: white; }
 }
-
 
 h2 {
     text-align: center;
@@ -82,4 +80,148 @@ h2 {
     cursor: pointer;
     margin: 10px;
     border-radius: 10px;
+}
+
+:root {
+    --color: #f5f5dc;
+}
+
+.music-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    border-radius: 25px;
+    padding: 1em 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 1em;
+    z-index: 1000;
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.3);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+.img-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.img-container img {
+    border-radius: 70%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.action-btn {
+    cursor: pointer;
+    border: none;
+    color: var(--color);
+    font-size: 1rem;
+    padding: 0.6em;
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.action-btn-big {
+    font-size: 1.2rem;
+    height: 2.8em;
+    width: 2.8em;
+}
+
+.fa-play {
+    transform: translateX(2px);
+}
+
+.fa-backward {
+    transform: translateX(-1px);
+}
+
+.fa-forward {
+    transform: translateX(1px);
+}
+
+.music-info {
+    display: none;
+    color: white;
+    font-size: 0.9rem;
+    max-width: 150px;
+}
+
+.music-container.play .music-info {
+    display: block;
+}
+
+h4 {
+    margin: 0;
+    font-size: 1rem;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.progress-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0.5em;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background: var(--color);
+    border-radius: 50px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+.volume-controls {
+    display: none;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.music-container.play .volume-controls {
+    display: flex;
+}
+
+.volume-container {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0;
+}
+
+.volume {
+    width: 40%;
+}
+
+.fa-volume-up {
+    color: var(--color);
+    font-size: 0.9rem;
 }
