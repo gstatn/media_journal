@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width" />
     <title>ICT</title>
     <link rel="stylesheet" href="style.css">
+    <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
@@ -13,34 +14,48 @@
     />
   </head>
   <body>
-    <div style="display: flex; justify-content: center;">
-      <h1>Welcome to my Reading & Watching journal!</h1>
-    </div>
-    <h2>Click a category to see what I've consumed..</h2>
-
-    <div class="button_container">
-      <a href="books.html">
-        <button class="media_button">Books</button>
-      </a>
-      <a href="shows_and_anime.html">
-        <button class="media_button">Shows & Anime</button>
-      </a>
+    <!-- HOME SECTION -->
+    <div id="home-section" class="view-section active">
+      <div style="display: flex; justify-content: center;">
+        <h1>Welcome to my Reading & Watching journal!</h1>
+      </div>
+      <h2>Click a category to see what I've consumed..</h2>
+      <div class="button_container">
+        <button class="media_button" onclick="showSection('books')">Books</button>
+        <button class="media_button" onclick="showSection('shows_and_anime')">Shows & Anime</button>
+      </div>
     </div>
 
+    <!-- BOOKS SECTION -->
+    <div id="books-section" class="view-section">
+      <button class="home-button" onclick="showSection('home')">Home</button>
+      <div class="title_wrapper">
+        <h1 class="formated_title_page">Books I've Read</h1>
+      </div>
+      <!-- Books content will go here -->
+    </div>
+
+    <!-- SHOWS & ANIME SECTION -->
+    <div id="shows_and_anime-section" class="view-section">
+      <button class="home-button" onclick="showSection('home')">Home</button>
+      <div class="title_wrapper">
+        <h1 class="formated_title_page">Shows & Anime I've Watched</h1>
+      </div>
+      <!-- Shows & Anime content will go here -->
+    </div>
+
+    <!-- MUSIC PLAYER (Always visible) -->
     <div class="music-container" id="music-container">
       <audio src="music_audios/pyrefly_forest.mp3" id="audio"></audio>
-
       <div class="img-container">
         <img src="music_covers/pyrefly_forest.jpg" alt="song cover" id="cover" />
       </div>
-
       <div class="music-info">
         <h4 id="title">Pyrefly Forest - Cat's Cradle</h4>
         <div class="progress-container" id="progress-container">
           <div class="progress" id="progress"></div>
         </div>
       </div>
-
       <div class="navigation">
         <button id="prev" class="action-btn">
           <i class="fas fa-backward"></i>
@@ -52,15 +67,20 @@
           <i class="fas fa-forward"></i>
         </button>
       </div>
-
       <div class="volume-controls">
         <i class="fas fa-volume-up"></i>
         <div class="progress-container volume-container" id="volume-container">
           <div class="progress volume" id="volume"></div>
         </div>
       </div>
+      <button class="collapse-btn" id="collapse-btn">
+          <i class="fas fa-chevron-left"></i>
+      </button>
+      </div>
     </div>
 
-    <script src="script.js"></script>
+    <!-- SCRIPTS -->
+    <script src="music.js"></script>
+    <script src="navigation.js"></script>
   </body>
 </html>
