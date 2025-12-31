@@ -1,0 +1,104 @@
+/* ============================================
+   BUTTONS - All button styles
+   ============================================ */
+
+/* Button container */
+.button_container {
+    text-align: center;
+    margin-top: 30px;
+    background: transparent;
+}
+
+.button_container a {
+    display: inline-block;
+}
+
+/* Media buttons (Books, Shows & Anime) */
+.media_button {
+    color: white;
+    background: transparent;
+    border: 2px solid white;
+    padding: 20px 40px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 10px;
+    border-radius: 10px;
+    transition: all 0.3s ease;
+}
+
+.media_button:hover {
+    background: rgba(255, 255, 255, 0.2);
+    transform: scale(1.05);
+}
+
+/* Home button for navigation */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(var(--blur-backdrop));
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: 12px 24px;
+    border-radius: 50px;
+    color: white;
+    cursor: pointer;
+    font-size: 16px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    z-index: 1000;
+}
+
+.home-button:hover {
+    background: rgba(255, 255, 255, 0.3);
+    transform: scale(1.05);
+}
+
+/* Action buttons (music player controls) */
+.action-btn {
+    cursor: pointer;
+    border: none;
+    color: var(--color-primary);
+    font-size: 1rem;
+    padding: 0.6em;
+    border-radius: 50%;
+    height: 2.5em;
+    width: 2.5em;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background: rgba(255, 255, 255, 0.15);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+    transition: all 0.3s;
+}
+
+.action-btn:hover {
+    background: rgba(255, 255, 255, 0.25);
+    transform: scale(1.1);
+}
+
+.action-btn-big {
+    font-size: 1.2rem;
+    height: 2.8em;
+    width: 2.8em;
+}
+
+/* Collapse/expand button */
+.collapse-btn {
+    position: relative;
+    width: 35px;
+    height: 35px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.25);
+    border: 2px solid rgba(255, 255, 255, 0.4);
+    color: var(--color-primary);
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1rem;
+    transition: all 0.3s;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    z-index: 10;
+    flex-shrink: 0;
+}

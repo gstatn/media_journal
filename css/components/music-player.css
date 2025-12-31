@@ -1,0 +1,146 @@
+/* ============================================
+   MUSIC PLAYER - Complete music player styles
+   ============================================ */
+
+/* Music player container with glassmorphism */
+.music-container {
+    position: fixed;
+    bottom: 20px;
+    left: 20px;
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--blur-backdrop));
+    border-radius: 25px;
+    padding: 1.3em 1.5em 0.8em 1.5em;
+    display: flex;
+    align-items: center;
+    gap: 0.7em;
+    z-index: 1000;
+    box-shadow: var(--shadow-card);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    transition: all 0.3s;
+}
+
+/* Collapsed state - hide everything except button */
+.music-container.collapsed {
+    width: 50px;
+    height: 50px;
+    padding: 0;
+    background: transparent;
+    backdrop-filter: none;
+    border: none;
+    box-shadow: none;
+}
+
+.music-container.collapsed .img-container,
+.music-container.collapsed .music-info,
+.music-container.collapsed .navigation,
+.music-container.collapsed .progress-container,
+.music-container.collapsed .volume-controls,
+.music-container.collapsed .fa-volume-up {
+    display: none;
+}
+
+.music-container.collapsed.play .music-info,
+.music-container.collapsed.play .volume-controls {
+    display: none !important;
+}
+
+.music-container.collapsed .collapse-btn {
+    background: rgba(255, 255, 255, 0.25);
+    backdrop-filter: blur(var(--blur-backdrop));
+    border: 2px solid rgba(255, 255, 255, 0.4);
+}
+
+/* Album cover container */
+.img-container {
+    position: relative;
+    width: 60px;
+    height: 60px;
+    flex-shrink: 0;
+}
+
+.img-container img {
+    border-radius: 70%;
+    display: block;
+    object-fit: cover;
+    height: 100%;
+    width: 100%;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+/* Music control buttons container */
+.navigation {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0.5em;
+}
+
+/* Icon alignment adjustments */
+.fa-play {
+    transform: translateX(2px);
+}
+
+.fa-backward {
+    transform: translateX(-1px);
+}
+
+.fa-forward {
+    transform: translateX(1px);
+}
+
+/* Song info display - shown when playing */
+.music-info {
+    display: none;
+    color: white;
+    font-size: 0.9rem;
+    max-width: 150px;
+}
+
+.music-container.play .music-info {
+    display: block;
+}
+
+/* Progress bar styling */
+.progress-container {
+    background: rgba(255, 255, 255, 0.2);
+    border-radius: 50px;
+    cursor: pointer;
+    margin-top: 0.5em;
+    height: 4px;
+    width: 100%;
+}
+
+.progress {
+    background: var(--color-primary);
+    border-radius: 50px;
+    height: 100%;
+    width: 0%;
+    transition: width 0.1s linear;
+}
+
+/* Volume controls - shown when playing */
+.volume-controls {
+    display: none;
+    align-items: center;
+    gap: 0.5em;
+}
+
+.music-container.play .volume-controls {
+    display: flex;
+}
+
+.volume-container {
+    width: 60px;
+    background: rgba(255, 255, 255, 0.2);
+    margin: 0;
+}
+
+.volume {
+    width: 40%;
+}
+
+.fa-volume-up {
+    color: var(--color-primary);
+    font-size: 0.9rem;
+}

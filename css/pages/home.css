@@ -1,0 +1,28 @@
+/* ============================================
+   HOME PAGE - Specific styles for home section
+   ============================================ */
+
+#home-section {
+    /* Add home-specific styles here if needed */
+}
+
+/* Center the welcome message */
+#home-section h1 {
+    /* Uses default h1 styles from typography.css */
+}
+
+#home-section h2 {
+    /* Uses default h2 styles from typography.css */
+}
+
+/* Responsive adjustments for home page */
+@media screen and (max-width: 768px) {
+    #home-section h1 {
+        font-size: 45px;
+        margin-top: 150px;
+    }
+    
+    #home-section h2 {
+        font-size: 28px;
+    }
+}

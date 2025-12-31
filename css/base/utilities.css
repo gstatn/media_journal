@@ -1,0 +1,65 @@
+/* ============================================
+   UTILITIES - Helper classes and responsive styles
+   ============================================ */
+
+/* Glassmorphism utility class */
+.glass {
+    background: rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(var(--blur-backdrop));
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: var(--shadow-card);
+}
+
+/* Flexbox utilities */
+.flex-center {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.flex-column {
+    display: flex;
+    flex-direction: column;
+}
+
+/* Responsive breakpoints */
+@media screen and (max-width: 768px) {
+    body::before {
+        filter: blur(5px);
+    }
+    
+    .music-container {
+        bottom: 10px;
+        left: 10px;
+        padding: 1em;
+    }
+    
+    .home-button {
+        top: 10px;
+        left: 10px;
+        padding: 10px 20px;
+        font-size: 14px;
+    }
+    
+    .media_button {
+        padding: 15px 30px;
+        font-size: 16px;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .music-container {
+        max-width: calc(100vw - 20px);
+    }
+    
+    .music-info {
+        max-width: 100px;
+        font-size: 0.8rem;
+    }
+    
+    .media_button {
+        display: block;
+        width: 80%;
+        margin: 10px auto;
+    }
+}

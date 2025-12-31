@@ -3,8 +3,22 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width" />
-    <title>ICT</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Reading & Watching Journal</title>
+    
+    <!-- Base Styles -->
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/base/typography.css">
+    <link rel="stylesheet" href="css/base/utilities.css">
+    
+    <!-- Component Styles -->
+    <link rel="stylesheet" href="css/components/buttons.css">
+    <link rel="stylesheet" href="css/components/music-player.css">
+    
+    <!-- Page Styles -->
+    <link rel="stylesheet" href="css/pages/home.css">
+    <link rel="stylesheet" href="css/pages/books.css">
+    <link rel="stylesheet" href="css/pages/shows.css">
+    
     <!-- Font Awesome for icons -->
     <link
       rel="stylesheet"
@@ -46,9 +60,9 @@
 
     <!-- MUSIC PLAYER (Always visible) -->
     <div class="music-container" id="music-container">
-      <audio src="music_audios/pyrefly_forest.mp3" id="audio"></audio>
+      <audio src="assets/music/audio/pyrefly_forest.mp3" id="audio"></audio>
       <div class="img-container">
-        <img src="music_covers/pyrefly_forest.jpg" alt="song cover" id="cover" />
+        <img src="assets/music/covers/pyrefly_forest.jpg" alt="song cover" id="cover" />
       </div>
       <div class="music-info">
         <h4 id="title">Pyrefly Forest - Cat's Cradle</h4>
@@ -74,13 +88,13 @@
         </div>
       </div>
       <button class="collapse-btn" id="collapse-btn">
-          <i class="fas fa-chevron-left"></i>
+        <i class="fas fa-chevron-left"></i>
       </button>
-      </div>
     </div>
 
     <!-- SCRIPTS -->
-    <script src="music.js"></script>
-    <script src="navigation.js"></script>
+    <script src="js/components/music.js"></script>
+    <script src="js/utils/navigation.js"></script>
+    <script src="js/main.js"></script>
   </body>
 </html>

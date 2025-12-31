@@ -1,0 +1,58 @@
+/* ============================================
+   MAIN STYLES - Core layout and global styles
+   ============================================ */
+
+/* Custom font import */
+@font-face {
+    font-family: 'Romie';
+    src: url('../assets/fonts/romie-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+/* CSS Variables */
+:root {
+    --color-primary: #f5f5dc;
+    --color-white: #ffffff;
+    --shadow-text: 3px 3px 10px black;
+    --shadow-card: 0 8px 32px rgba(0, 0, 0, 0.3);
+    --blur-backdrop: 10px;
+}
+
+/* Global reset and font application */
+* {
+    zoom: 1;
+    font-family: "Romie", sans-serif;
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    position: relative;
+    min-height: 100vh;
+}
+
+/* Blurred background image */
+body::before {
+    content: "";
+    position: fixed;
+    top: -20px;
+    left: -20px;
+    width: calc(100% + 40px);
+    height: calc(100% + 40px);
+    background-image: url("../assets/images/backgrounds/walking_mountain.png");
+    background-size: cover;
+    background-position: center;
+    filter: blur(8px);
+    z-index: -1;
+}
+
+/* Section visibility toggle */
+.view-section {
+    display: none;
+}
+
+.view-section.active {
+    display: block;
+}

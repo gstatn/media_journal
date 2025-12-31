@@ -43,8 +43,8 @@ loadSong(songs[songIndex]);
 // Load song details into player
 function loadSong(song) {
   title.textContent = song.title;
-  audio.src = `music_audios/${song.name}.mp3`;
-  cover.src = `music_covers/${song.cover}`;
+  audio.src = `assets/music/audio/${song.name}.mp3`;
+  cover.src = `assets/music/covers/${song.cover}`;
 }
 
 // Play current song
