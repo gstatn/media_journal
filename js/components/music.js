@@ -23,11 +23,6 @@ const songs = [
     name: 'come_back',
     title: 'возвращайся - angel vox',
     cover: 'come_back.jpg'
-  },
-  {
-    name: 'too_much',
-    title: 'too much - otuka',
-    cover: 'too_much.jpg'
   }
 ];
 
