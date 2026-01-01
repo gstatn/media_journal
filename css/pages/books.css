@@ -11,20 +11,39 @@
     margin-bottom: 40px;
 }
 
-/* Add book-specific styles here as you develop the content */
-/* For example:
-.book-grid {
-    display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(200px, 1fr));
-    gap: 20px;
-    padding: 20px;
+#books-section .book-filters {
+  position: absolute;
+  top: 17%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  
+  background: rgba(255, 255, 255, 0.1);
+  padding: 5px 15px;
+  border: 2px solid rgba(255, 255, 255, 0.2);
+  border-radius: 5px;
+
+  color: white;
 }
 
-.book-card {
-    background: rgba(255, 255, 255, 0.1);
-    backdrop-filter: blur(10px);
-    border-radius: 15px;
-    padding: 20px;
-    border: 1px solid rgba(255, 255, 255, 0.2);
+.filter-btn {
+  background: none;
+  border: none;
+  color: inherit;
+  font-family: inherit;
+  font-size: inherit;
+  cursor: pointer;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
 }
-*/
+
+.filter-btn:hover {
+  cursor: pointer;
+}
+
+.filter-btn.active {
+  text-decoration: underline;
+}

@@ -17,13 +17,19 @@
 .media_button {
     color: white;
     background: transparent;
-    border: 2px solid white;
-    padding: 20px 40px;
-    font-size: 18px;
+    border: transparent;
+    padding: 5px 10px;
     cursor: pointer;
     margin: 10px;
     border-radius: 10px;
     transition: all 0.3s ease;
+}
+
+/* Style the images inside media buttons */
+.media_button img {
+    width: 150px;        /* Adjust this value to make icons smaller/larger */
+    height: auto;        /* Maintains aspect ratio */
+    display: block;      /* Removes extra spacing */
 }
 
 .media_button:hover {

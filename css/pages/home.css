@@ -1,7 +1,6 @@
 /* ============================================
    HOME PAGE - Specific styles for home section
    ============================================ */
-
 #home-section {
     /* Add home-specific styles here if needed */
 }
@@ -15,6 +14,31 @@
     /* Uses default h2 styles from typography.css */
 }
 
+/* Home button styling - appears on Books and Shows pages */
+.home-button {
+    position: fixed;
+    top: 20px;
+    left: 20px;
+    z-index: 1001;       /* Above music player */
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(var(--blur-backdrop));
+    color: white;
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    border-radius: 10px;
+    padding: 0.6em 1.2em;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    box-shadow: var(--shadow-card);
+}
+
+.home-button:hover {
+    background: rgba(255, 255, 255, 0.25);
+    border-color: rgba(255, 255, 255, 0.5);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+}
+
 /* Responsive adjustments for home page */
 @media screen and (max-width: 768px) {
     #home-section h1 {
@@ -24,5 +48,21 @@
     
     #home-section h2 {
         font-size: 28px;
+    }
+    
+    .home-button {
+        top: 15px;
+        left: 15px;
+        padding: 0.5em 1em;
+        font-size: 0.9rem;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    .home-button {
+        top: 10px;
+        left: 10px;
+        padding: 0.4em 0.8em;
+        font-size: 0.85rem;
     }
 }

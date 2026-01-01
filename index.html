@@ -35,8 +35,12 @@
       </div>
       <h2>Click a category to see what I've consumed..</h2>
       <div class="button_container">
-        <button class="media_button" onclick="showSection('books')">Books</button>
-        <button class="media_button" onclick="showSection('shows_and_anime')">Shows & Anime</button>
+        <button class="media_button" onclick="showSection('books')">
+            <img src="assets/images/icons/books_icon.png" alt="stack of books"/>
+        </button>
+        <button class="media_button" onclick="showSection('shows_and_anime')">
+            <img src="assets/images/icons/movie_icon.png" alt="camera, popcorn, and a 5-star rating"/>
+        </button>
       </div>
     </div>
 
@@ -46,7 +50,14 @@
       <div class="title_wrapper">
         <h1 class="formated_title_page">Books I've Read</h1>
       </div>
-      <!-- Books content will go here -->
+       <!-- Books content will go here -->
+      <div class="book-filters">
+          Filter by:
+          <button class="filter-btn active" data-filter="relevance">Relevance</button>
+          <button class="filter-btn" data-filter="rating">Personal Rating</button>
+          <button class="filter-btn" data-filter="reading">Currently Reading</button>
+      </div>
+      </div> 
     </div>
 
     <!-- SHOWS & ANIME SECTION -->
@@ -56,6 +67,12 @@
         <h1 class="formated_title_page">Shows & Anime I've Watched</h1>
       </div>
       <!-- Shows & Anime content will go here -->
+      <div class="show-filters">
+          Filter by:
+            <button class="filter-btn active" data-filter="relevance">Relevance</button>
+            <button class="filter-btn" data-filter="rating">Personal Rating</button>
+            <button class="filter-btn" data-filter="reading">Currently Reading</button> 
+      </div>
     </div>
 
     <!-- MUSIC PLAYER (Always visible) -->
@@ -93,6 +110,7 @@
     </div>
 
     <!-- SCRIPTS -->
+    <script src="js/components/books.js"></script>
     <script src="js/components/music.js"></script>
     <script src="js/utils/navigation.js"></script>
     <script src="js/main.js"></script>

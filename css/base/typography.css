@@ -4,6 +4,7 @@
 
 /* Main title with unblur animation */
 h1 {
+    font-family: "GWFF", sans-serif; 
     background: transparent;
     color: white;
     text-shadow: var(--shadow-text);

@@ -4,8 +4,30 @@
 
 /* Custom font import */
 @font-face {
+    font-family: 'GWFF';
+    src: url('../assets/fonts/GABRWFFR.TTF') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
     font-family: 'Romie';
     src: url('../assets/fonts/romie-regular.otf') format('opentype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'STTI';
+    src: url('../assets/fonts/StixTwoText.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
+
+
+@font-face {
+    font-family: 'Biro';
+    src: url('../assets/fonts/Biro_Script_reduced.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
 }
@@ -22,7 +44,7 @@
 /* Global reset and font application */
 * {
     zoom: 1;
-    font-family: "Romie", sans-serif;
+    font-family: "STTI", sans-serif;
     box-sizing: border-box;
 }
 
@@ -41,7 +63,7 @@ body::before {
     left: -20px;
     width: calc(100% + 40px);
     height: calc(100% + 40px);
-    background-image: url("../assets/images/backgrounds/walking_mountain.png");
+    background-image: url("../assets/images/backgrounds/cat_staring.png");
     background-size: cover;
     background-position: center;
     filter: blur(8px);
@@ -51,6 +73,8 @@ body::before {
 /* Section visibility toggle */
 .view-section {
     display: none;
+    max-width: 90%;      /* 90% width constraint */
+    margin: 0 auto;      /* Center the content */
 }
 
 .view-section.active {
